@@ -20,7 +20,7 @@ router.post("/signup" ,async (req,res)=>{
         
         await newUser.save();
         res.status(200).json({message:"Account created!"});
-        res.send(newUser);
+       
     } catch (error) {
         res.status(400).json({error:error.message});
     }
